@@ -16,16 +16,24 @@ func main() {
 
 	var guess int
 
+	var trialcount int = 0
+
 	for{
 		fmt.Println("Please input your guess")
 		fmt.Scan(&guess)
-		if guess > secretNumber {
-			fmt.Println("Too Big")
-		} else if guess < secretNumber {
-			fmt.Println("Too small")
-		} else {
-			fmt.Println("You win!")
+		if trialcount > 4{
+			fmt.Println("You lose")
 			break
+		}else{
+			if guess > secretNumber {
+				fmt.Println("Too Big")
+			} else if guess < secretNumber {
+				fmt.Println("Too small")
+			} else {
+				fmt.Println("You win!")
+				break
+			}
 		}
+		trialcount += 1
 	}
 }
