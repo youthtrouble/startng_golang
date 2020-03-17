@@ -9,10 +9,10 @@ import (
 func main() {
 	fmt.Println("Guess the number")
 
-	//random number generator
+
 	source := rand.NewSource(time.Now().UnixNano())
 	randomizer := rand.New(source)
-	secretNumber := randomizer.Intn(50) //generates numbers between 0 and n (10)
+	secretNumber := randomizer.Intn(50) 
 
 	var guess int
 
